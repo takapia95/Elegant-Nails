@@ -1,0 +1,148 @@
+
+html, body {
+  background-image: url("image/E1.png");
+  font-family: sans-serif;
+  padding-top: 150px; 
+  height: 100%;
+  width: 100%;
+}
+
+
+.grid-king {
+display: grid;
+     grid-template-areas: 
+       "he he he"
+       "na na na"
+       "fo fo fo";
+  gap: 10px;
+    grid-template-columns: repeat(3, auto-fill);
+    grid-template-rows: repeat(3,auto-fill);
+}
+.header {
+  grid-area: he;
+  display: flex;
+}
+.nav {
+  grid-area: na;
+}
+.footer {
+  grid-area: fo;
+}
+.grid-king > * {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-image: url("image/E1B.png");
+    background-size: 100%;
+  }
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+a:hover {
+  background-image: linear-gradient(
+    to right,
+    #c61dcf ,
+    #fbb3ff 50%,
+    #ed00fa
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.map-container-2{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-2 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+fieldset{
+  width: fit-content; 
+  text-align: center;
+  margin: 0 auto; 
+}
+
+#action-container{
+ 
+  color: DeepPink; 
+  text-align: center;
+}
+
+#heresdata{
+  text-align: center;
+  color: HotPink; 
+  margin: 0 auto;
+}
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image to responsive */
+.image {
+  width: 200%;
+  height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFA0E9;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .5s ease;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.container:hover .overlay {
+  transform: scale(1);
+}
+
+.text {
+  color: #570A45;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.zoom {
+  padding: 5px;
+  background-color: pink;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(5); 
+  -webkit-transform: scale(4); 
+  transform: scale(4);
+}
+form {
+   text-align: left;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+}
